@@ -229,11 +229,11 @@ address {
 
 .footer-subscribe-text {
   font-style: normal;
+  color: var(--white-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--cloud-color);
   margin-bottom: 16px;
 }
 
@@ -245,7 +245,7 @@ address {
 .subscribe-email-input {
   width: 264px;
   height: 40px;
-  border: 1px solid var(--cloud-color);
+  border: 1px solid var(--white-color);
   background-color: transparent;
   font-size: 12px;
   line-height: 1.5;
@@ -253,7 +253,7 @@ address {
   padding-left: 16px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  color: var(--cloud-color);
+  color: var(--white-color);
 }
 
 .subscribe-email-input::placeholder {
@@ -274,7 +274,7 @@ address {
   align-items: center;
   text-align: center;
   letter-spacing: 0.04em;
-  color: var(--cloud-color);
+  color: var(--white-color);
   cursor: pointer;
   background-color: var(--iris-color);
   border: none;
@@ -292,7 +292,7 @@ address {
   fill: var(--cloud-color);
 }
 /*Modal*/
-@keyframes animate0-1 {
+@keyframes openingModal {
   0% {
     transform: scale(0);
   }
@@ -313,7 +313,7 @@ address {
   background-color: var(--navi-blue-modal-color);
   margin: 0;
   bottom: 0;
-  animation: animate0-1 3000ms ease-in-out 200ms;
+  animation: openingModal 3000ms ease-in-out 200ms;
   animation-direction: normal;
   transition: opacity var(--transition), visibility var(--transition);
 }
@@ -329,6 +329,7 @@ address {
   min-height: 584px;
   margin: 0;
   padding: 0;
+  padding: 72px 24px 24px 24px;
   border-radius: 4px;
   position: absolute;
   top: 50%;
@@ -370,7 +371,6 @@ address {
   fill: var(--white-color);
 }
 .form-text {
-  padding: 72px 24px 0;
   margin-bottom: 16px;
   font-weight: 500;
   font-size: 16px;
@@ -378,13 +378,9 @@ address {
   text-align: center;
   letter-spacing: 0.02em;
 }
-.form-container {
-  padding: 0 24px;
-}
 .fields {
   margin-bottom: 8px;
 }
-
 .field-lable {
   font-weight: 400;
   font-size: 12px;
@@ -407,7 +403,7 @@ address {
   background-color: transparent;
   padding-left: 38px;
   outline: transparent;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--transition);
 }
 
 .username:focus {
@@ -419,7 +415,7 @@ address {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill var(--transition);
   fill: var(--navi-blue-color);
 }
 
@@ -437,14 +433,14 @@ address {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
-  color: var(--light-slate-color);
+  color: var(--navi-blue-modal-color);
   border: 1px solid var(--navi-blue-modal-color);
   border-radius: 4px;
   background-color: transparent;
   padding: 8px 16px;
   outline: transparent;
   resize: none;
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color var(--transition);
 }
 
 .comment:focus {
@@ -465,11 +461,10 @@ address {
 .checkbox {
   width: 16px;
   height: 16px;
-  border: 1px solid var(--light-slate-color);
+  border: 1px solid var(--navi-blue-modal-color);
   border-radius: 2px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition), border var(--transition),
+    fill var(--transition);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -490,7 +485,7 @@ address {
   line-height: 1.33;
   letter-spacing: 0.04em;
   text-decoration-line: underline;
-  color: var(--ocean-color);
+  color: var(--iris-color);
 }
 
 .button-send {
@@ -502,12 +497,12 @@ address {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
-  color: var(--cloud-color);
+  color: var(--white-color);
   cursor: pointer;
   background: var(--iris-color);
   border: none;
   border-radius: 4px;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color var(--transition);
   margin: 0 auto;
 }
 
